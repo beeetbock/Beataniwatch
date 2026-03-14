@@ -1,3 +1,5 @@
+export * as HiAnime from "./hianime/hianime.js";
+
 // BeatAniWatch class export
 export * as BeatAniWatch from "./hianime/hianime.js";
 
