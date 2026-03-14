@@ -23,7 +23,7 @@ const loggerOptions: LoggerOptions = {
         level(label) {
             return {
                 level: label.toUpperCase(),
-                context: "aniwatch-pkg",
+                context: "beataniwatch-pkg",
             };
         },
     },
