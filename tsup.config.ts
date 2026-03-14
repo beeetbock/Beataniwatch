@@ -11,6 +11,6 @@ export default defineConfig({
     // minifySyntax: true,
     // minifyIdentifiers: true,
     // minifyWhitespace: true,
-    globalName: "aniwatch",
+    globalName: "beataniwatch",
     skipNodeModulesBundle: true,
 });
