@@ -1,11 +1,11 @@
 import { AxiosError } from "axios";
-import type { AniwatchError } from "../config/error.js";
+import type { BeatAniWatchError } from "../config/error.js";
 import { log } from "../config/logger.js";
 
 const ANSI_ESC_CODE_COLOR_RED = "\x1b[31m";
 const ANSI_ESC_CODE_COLOR_RESET = "\x1b[0m";
 
-export class HiAnimeError extends Error implements AniwatchError {
+export class HiAnimeError extends Error implements BeatAniWatchError {
     static DEFAULT_ERROR_STATUS = 500;
     static DEFAULT_ERROR_MESSAGE = "Something went wrong";
 
