@@ -1,4 +1,4 @@
-export interface AniwatchError extends Error {
+export interface BeatAniWatchError extends Error {
     scraper: string;
     status: number;
 }
