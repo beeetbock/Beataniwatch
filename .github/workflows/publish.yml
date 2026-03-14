@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Clean dist
+        run: rm -rf dist
+
       - name: Lint and build
         run: pnpm run ci
 
@@ -37,16 +40,3 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      # - name: Setup .npmrc file to publish to GitHub Packages
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     cache: pnpm
-      #     node-version: 20
-      #     registry-url: https://npm.pkg.github.com
-      #     scope: "@${{ github.repository_owner }}"
-      # - run: npm run addscope
-      # - name: Publish to GitHub Packages
-      #   run: npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
