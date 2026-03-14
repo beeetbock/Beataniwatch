@@ -7,7 +7,6 @@ import type {
 } from "../hianime/types/anime.js";
 import { SEARCH_PAGE_FILTERS } from "./constants.js";
 import type { CheerioAPI, SelectorType, Cheerio } from "cheerio";
-import type { AnyNode } from "domhandler";
 import type { FilterKeys } from "../hianime/types/animeSearch.js";
 
 export const extractAnimes = (
@@ -146,7 +145,7 @@ export const extractTop10Animes = (
 
 export const extractMostPopularAnimes = (
     $: CheerioAPI,
-    selector: SelectorType | Cheerio<AnyNode>,
+    selector: SelectorType | Cheerio<any>,
     scraperName: string
 ): MostPopularAnime[] => {
     try {
