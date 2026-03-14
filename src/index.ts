@@ -6,7 +6,7 @@ export * as BeatAniWatch from "./hianime/hianime.js";
 // BeatAniWatch error
 export { HiAnimeError as BeatAniWatchError } from "./hianime/error.js";
 
-export type { AniwatchError } from "./config/error.js";
+export type { BeatAniWatchError } from "./config/error.js";
 
 // helpful constant exports
 // export {
