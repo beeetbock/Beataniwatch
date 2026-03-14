@@ -28,11 +28,11 @@ class Scraper {
      * @param {string} animeId - unique anime id
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getInfo("steinsgate-3")
+     * client.getInfo("steinsgate-3")
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -46,11 +46,11 @@ class Scraper {
      * @param {number} page - page number, defaults to `1`
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getCategoryAnime("subbed-anime")
+     * client.getCategoryAnime("subbed-anime")
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -63,11 +63,11 @@ class Scraper {
      * @param {string} animeId - unique anime id
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getEpisodes("steinsgate-3")
+     * client.getEpisodes("steinsgate-3")
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -80,11 +80,11 @@ class Scraper {
      * @param {string} episodeId - unique episode id
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getEpisodeSources("steinsgate-3?ep=230", "hd-1", "sub")
+     * client.getEpisodeSources("steinsgate-3?ep=230", "hd-1", "sub")
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -102,11 +102,11 @@ class Scraper {
      * @param {number} page - page number, defaults to `1`
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getGenreAnime("shounen", 2)
+     * client.getGenreAnime("shounen", 2)
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -120,11 +120,11 @@ class Scraper {
      * @param {number} page - page number, defaults to `1`
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getProducerAnimes("toei-animation", 2)
+     * client.getProducerAnimes("toei-animation", 2)
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -139,11 +139,11 @@ class Scraper {
      * @param {SearchFilters} filters - optional advance search filters
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper();
+     * const client = new BeatAniWatch.Scraper();
      *
-     * hianime
+     * client
      *   .search("monster", 1, {
      *     genres: "seinen,psychological",
      *   })
@@ -163,11 +163,11 @@ class Scraper {
      * @param {string} q - search query
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.searchSuggestions("one piece")
+     * client.searchSuggestions("one piece")
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -180,11 +180,11 @@ class Scraper {
      * @param {string} animeEpisodeId - unique anime episode id
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getEpisodeServers("steinsgate-0-92?ep=2055")
+     * client.getEpisodeServers("steinsgate-0-92?ep=2055")
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -198,12 +198,12 @@ class Scraper {
      * @param {number} tzOffset - timezone offset in minutes, defaults to `-330` (IST)
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      * const timezoneOffset = -330; // IST offset in minutes
      *
-     * hianime.getEstimatedSchedule("2025-06-09", timezoneOffset)
+     * client.getEstimatedSchedule("2025-06-09", timezoneOffset)
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -216,11 +216,11 @@ class Scraper {
      * @param {string} animeId - unique anime id
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getNextEpisodeSchedule("one-piece-100")
+     * client.getNextEpisodeSchedule("one-piece-100")
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -232,11 +232,11 @@ class Scraper {
     /**
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getHomePage()
+     * client.getHomePage()
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -250,11 +250,11 @@ class Scraper {
      * @param {number} page - page number, defaults to `1`
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getAZList("0-9", 1)
+     * client.getAZList("0-9", 1)
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
@@ -267,11 +267,11 @@ class Scraper {
      * @param {string} animeId - unique anime id
      * @throws {HiAnimeError}
      * @example
-     * import { HiAnime } from "aniwatch";
+     * import { BeatAniWatch } from "beataniwatch";
      *
-     * const hianime = new HiAnime.Scraper()
+     * const client = new BeatAniWatch.Scraper()
      *
-     * hianime.getQtipInfo("one-piece-100")
+     * client.getQtipInfo("one-piece-100")
      *  .then((data) => console.log(data))
      *  .catch((err) => console.error(err));
      *
