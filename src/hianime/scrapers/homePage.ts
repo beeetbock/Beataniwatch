@@ -11,9 +11,11 @@ import type { ScrapedHomePage } from "../types/scrapers/index.js";
 
 /**
  * @example
- * import { getHomePage } from "aniwatch";
+ * import { BeatAniWatch } from "beataniwatch";
  *
- * getHomePage()
+ * const client = new BeatAniWatch.Scraper()
+ *
+ * client.getHomePage()
  *  .then((data) => console.log(data))
  *  .catch((err) => console.error(err));
  *
