@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/ghoshRitesh12/aniwatch">
+  <a href="https://github.com/beeetbock/Beataniwatch">
     <img 
       src="https://repository-images.githubusercontent.com/838366965/5c03381b-d162-4e71-8eef-0ac44c284411" 
       alt="Logo" 
@@ -10,20 +10,20 @@
   </a>
 </p>
 
-# <p align="center">Aniwatch</p>
+# <p align="center">BeatAniWatch</p>
 
 <div align="center">
-  📦 A scraper package serving anime information from <a href="https://hianimez.to/home" target="_blank">hianimez.to</a>
+  📦 A scraper package serving anime information from <a href="https://hianime.cv/home" target="_blank">hianime.cv</a>
   <br/>
   <strong>
     <a 
-      href="https://github.com/ghoshRitesh12/aniwatch/issues/new?assignees=ghoshRitesh12&labels=bug&template=bug-report.yml"
+      href="https://github.com/beeetbock/Beataniwatch/issues/new?assignees=beeetbock&labels=bug&template=bug-report.yml"
     > 
       Bug report
     </a>
     ·
     <a 
-      href="https://github.com/ghoshRitesh12/aniwatch/issues/new?assignees=ghoshRitesh12&labels=enhancement&template=feature-request.md"
+      href="https://github.com/beeetbock/Beataniwatch/issues/new?assignees=beeetbock&labels=enhancement&template=feature-request.md"
     >
       Feature request
     </a>
@@ -34,26 +34,24 @@
 
 <div align="center">
 
-[![Publish Package](https://github.com/ghoshRitesh12/aniwatch/actions/workflows/publish.yml/badge.svg)](https://github.com/ghoshRitesh12/aniwatch/actions/workflows/publish.yml)
-![NPM Downloads](https://img.shields.io/npm/dw/aniwatch?logo=npm&logoColor=e78284&label=Downloads&labelColor=292e34&color=31c754)
-[![GitHub License](https://img.shields.io/github/license/ghoshRitesh12/aniwatch?logo=github&logoColor=%23959da5&labelColor=%23292e34&color=%2331c754)](https://github.com/ghoshRitesh12/aniwatch/blob/main/LICENSE)
-
-<!-- ![npm bundle size](https://img.shields.io/bundlephobia/minzip/aniwatch?logo=npm&logoColor=e78284&label=MinZipped%20Size&labelColor=292e34&color=31c754) -->
+[![Publish Package](https://github.com/beeetbock/Beataniwatch/actions/workflows/publish.yml/badge.svg)](https://github.com/beeetbock/Beataniwatch/actions/workflows/publish.yml)
+![NPM Downloads](https://img.shields.io/npm/dw/beataniwatch?logo=npm&logoColor=e78284&label=Downloads&labelColor=292e34&color=31c754)
+[![GitHub License](https://img.shields.io/github/license/beeetbock/Beataniwatch?logo=github&logoColor=%23959da5&labelColor=%23292e34&color=%2331c754)](https://github.com/beeetbock/Beataniwatch/blob/main/LICENSE)
 
 </div>
 
 <div align="center">
 
-[![stars](https://img.shields.io/github/stars/ghoshRitesh12/aniwatch?style=social)](https://github.com/ghoshRitesh12/aniwatch/stargazers)
-[![forks](https://img.shields.io/github/forks/ghoshRitesh12/aniwatch?style=social)](https://github.com/ghoshRitesh12/aniwatch/network/members)
-[![issues](https://img.shields.io/github/issues/ghoshRitesh12/aniwatch?style=social&logo=github)](https://github.com/ghoshRitesh12/aniwatch/issues?q=is%3Aissue+is%3Aopen+)
-[![version](https://img.shields.io/github/v/release/ghoshRitesh12/aniwatch?display_name=release&style=social&logo=github)](https://github.com/ghoshRitesh12/aniwatch/releases/latest)
+[![stars](https://img.shields.io/github/stars/beeetbock/Beataniwatch?style=social)](https://github.com/beeetbock/Beataniwatch/stargazers)
+[![forks](https://img.shields.io/github/forks/beeetbock/Beataniwatch?style=social)](https://github.com/beeetbock/Beataniwatch/network/members)
+[![issues](https://img.shields.io/github/issues/beeetbock/Beataniwatch?style=social&logo=github)](https://github.com/beeetbock/Beataniwatch/issues?q=is%3Aissue+is%3Aopen+)
+[![version](https://img.shields.io/github/v/release/beeetbock/Beataniwatch?display_name=release&style=social&logo=github)](https://github.com/beeetbock/Beataniwatch/releases/latest)
 
 </div>
 
 > [!IMPORTANT]
 >
-> 1. This package is just an unofficial package for [hianimez.to](https://hianimez.to) and is in no other way officially related to the same.
+> 1. This package is just an unofficial package for [hianime.cv](https://hianime.cv) and is in no other way officially related to the same.
 > 2. The content that this package provides is not mine, nor is it hosted by me. These belong to their respective owners. This package just demonstrates how to build a package that scrapes websites and uses their content.
 
 ## Table of Contents
@@ -87,30 +85,28 @@
 
 ### Installation
 
-To use `aniwatch` package in your project, run:
-
+To use `beataniwatch` package in your project, run:
 ```bash
-pnpm add aniwatch
-# or "yarn add aniwatch"
-# or "npm install aniwatch"
+pnpm add beataniwatch
+# or "yarn add beataniwatch"
+# or "npm install beataniwatch"
 ```
 
 ### Example usage
 
 Example - getting information about an anime by providing it's unique anime id, using anime [Steins;Gate](https://www.imdb.com/title/tt1910272/) with `steinsgate-3` unique anime id as an example.
-
 ```javascript
-import { HiAnime, HiAnimeError } from "aniwatch";
+import { BeatAniWatch, BeatAniWatchError } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
 try {
-    const data: HiAnime.ScrapedAnimeAboutInfo = await hianime.getInfo(
+    const data: BeatAniWatch.ScrapedAnimeAboutInfo = await client.getInfo(
         "steinsgate-3"
     );
     console.log(data);
 } catch (err) {
-    console.error(err instanceof HiAnimeError, err);
+    console.error(err instanceof BeatAniWatchError, err);
 }
 ```
 
@@ -123,20 +119,18 @@ try {
 </summary>
 
 #### Sample Usage
-
 ```typescript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getHomePage()
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   genres: ["Action", "Cars", "Adventure", ...],
@@ -259,7 +253,6 @@ hianime
     {...},
   ],
 }
-
 ```
 
 [🔼 Back to Top](#table-of-contents)
@@ -282,20 +275,18 @@ hianime
 |    `page`    | number |                                   The page number of the result.                                    |    No     |   `1`   |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getAZList("0-9", 1)
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   sortOption: "0-9",
@@ -309,7 +300,7 @@ hianime
       type: string,
       rating: string,
       episodes: {
-        sub: number ,
+        sub: number,
         dub: number
       }
     },
@@ -340,20 +331,18 @@ hianime
 | `animeId` | string | The unique anime id (in kebab case). |    Yes    |   --    |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getQtipInfo("one-piece-100")
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   anime: {
@@ -371,7 +360,7 @@ hianime
     synonyms: string,
     aired: string,
     status: string,
-    genres: ["Action", "Adventure", "Comedy", "Drama", "Fantasy", "Shounen", "Drama", "Fantasy", "Shounen", "Fantasy", "Shounen", "Shounen", "Super Power"]
+    genres: ["Action", "Adventure", "Comedy", "Drama", "Fantasy", "Shounen", "Super Power"]
   }
 }
 ```
@@ -395,20 +384,18 @@ hianime
 | `animeId` | string | The unique anime id (in kebab case). |    Yes    |   --    |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getInfo("steinsgate-3")
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   anime: [
@@ -553,13 +540,12 @@ hianime
 > For both `start_date` and `end_date`, year must be mentioned. If you wanna omit date or month specify `0` instead. Eg: omitting date -> 2014-10-0, omitting month -> 2014-0-12, omitting both -> 2014-0-0
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .search("monster", 1, {
         genres: "seinen,psychological",
     })
@@ -572,7 +558,6 @@ hianime
 ```
 
 #### Response Schema
-
 ```javascript
 {
   animes: [
@@ -634,20 +619,18 @@ hianime
 |    `q`    | string | The search suggestion query. |    Yes    |   --    |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .searchSuggestions("one piece")
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   suggestions: [
@@ -683,20 +666,18 @@ hianime
 |  `page`   | number |       The page number of the result.        |    No     |   `1`   |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getProducerAnimes("toei-animation", 2)
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   producerName: "Toei Animation Anime",
@@ -772,20 +753,18 @@ hianime
 |  `page`   | number |      The page number of the result.      |    No     |   `1`   |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getGenreAnime("shounen", 2)
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   genreName: "Shounen Anime",
@@ -845,13 +824,12 @@ hianime
 |   `page`   | number | The page number of the result. |    No     |   `1`   |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getCategoryAnime("subbed-anime")
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
@@ -863,7 +841,6 @@ hianime
 ```
 
 #### Response Schema
-
 ```javascript
 {
   category: "TV Series Anime",
@@ -926,21 +903,19 @@ hianime
 |     `tzOffset`      | number |      The timezone offset in minutes (defaults to -330 i.e. IST)      |    No     | `-330`  |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 const timezoneOffset = -330; // IST offset in minutes
 
-hianime
+client
     .getEstimatedSchedule("2025-06-09", timezoneOffset)
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   scheduledAnimes: [
@@ -978,20 +953,18 @@ hianime
 | `animeId` | string | The unique anime id (in kebab case). |    Yes    |   --    |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getNextEpisodeSchedule("one-piece-100")
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   airingISOTimestamp: string | null,
@@ -1019,20 +992,18 @@ hianime
 | `animeId` | string | The unique anime id. |    Yes    |   --    |
 
 #### Sample Usage
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getEpisodes("steinsgate-3")
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   totalEpisodes: 24,
@@ -1067,20 +1038,18 @@ hianime
 | `episodeId` | string | The unique episode id. |    Yes    |   --    |
 
 #### Request sample
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getEpisodeServers("steinsgate-0-92?ep=2055")
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   episodeId: "steinsgate-0-92?ep=2055",
@@ -1130,20 +1099,18 @@ hianime
 | `category` | string | The category of the episode ('sub', 'dub' or 'raw'). |    No     |     `"sub"`      |
 
 #### Request sample
-
 ```javascript
-import { HiAnime } from "aniwatch";
+import { BeatAniWatch } from "beataniwatch";
 
-const hianime = new HiAnime.Scraper();
+const client = new BeatAniWatch.Scraper();
 
-hianime
+client
     .getEpisodeSources("steinsgate-3?ep=230", "hd-1", "sub")
     .then((data) => console.log(data))
     .catch((err) => console.error(err));
 ```
 
 #### Response Schema
-
 ```javascript
 {
   headers: {
@@ -1178,33 +1145,31 @@ hianime
 
 ## Development
 
-Pull requests are always welcome. If you encounter any bug or want to add a new feature to this package, consider creating a new [issue](https://github.com/ghoshRitesh12/aniwatch/issues). If you wish to contribute to this project, read the [CONTRIBUTING.md](https://github.com/ghoshRitesh12/aniwatch/blob/main/CONTRIBUTING.md) file.
+Pull requests are always welcome. If you encounter any bug or want to add a new feature to this package, consider creating a new [issue](https://github.com/beeetbock/Beataniwatch/issues). If you wish to contribute to this project, read the [CONTRIBUTING.md](https://github.com/beeetbock/Beataniwatch/blob/main/CONTRIBUTING.md) file.
 
 ## Contributors
 
 Thanks to the following people for keeping this project alive and relevant.
 
-[![](https://contrib.rocks/image?repo=ghoshRitesh12/aniwatch)](https://github.com/ghoshRitesh12/aniwatch/graphs/contributors)
+[![](https://contrib.rocks/image?repo=beeetbock/Beataniwatch)](https://github.com/beeetbock/Beataniwatch/graphs/contributors)
 
 ## Thanks
 
+- [aniwatch](https://github.com/ghoshRitesh12/aniwatch) by [Ritesh Ghosh](https://github.com/ghoshRitesh12)
 - [consumet.ts](https://github.com/consumet/consumet.ts)
 - [api.consumet.org](https://github.com/consumet/api.consumet.org)
 
 ## Support
 
-Don't forget to leave a star 🌟. You can also follow me on X (Twitter) [@riteshgsh](https://x.com/riteshgsh).
+Don't forget to leave a star 🌟. You can also follow me on GitHub [@beeetbock](https://github.com/beeetbock).
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/license/mit/) - see the [LICENSE](https://github.com/ghoshRitesh12/aniwatch/blob/main/LICENSE) file for more details.
-
-<!-- <br/>
--->
+This project is licensed under the [MIT License](https://opensource.org/license/mit/) - see the [LICENSE](https://github.com/beeetbock/Beataniwatch/blob/main/LICENSE) file for more details.
 
 ## Star History
 
 <img
-  src="https://starchart.cc/ghoshRitesh12/aniwatch.svg?variant=adaptive"
+  src="https://starchart.cc/beeetbock/Beataniwatch.svg?variant=adaptive"
   alt=""
 />
