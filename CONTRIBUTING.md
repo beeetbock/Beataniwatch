@@ -1,6 +1,6 @@
-# Contributing to aniwatch
+# Contributing to beataniwatch
 
-Thank you for your interest in contributing to aniwatch. We appreciate whatever form of contribution you are willing to make. Every contribution counts ✨
+Thank you for your interest in contributing to beataniwatch. We appreciate whatever form of contribution you are willing to make. Every contribution counts ✨
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ In short, we welcome any sort of contribution you are willing to make as each an
 
 - Documentation improvements: from minor typos to major document overhauls
 - Helping others by answering questions in pull requests.
-- Fixing known [bugs](https://github.com/ghoshRitesh12/aniwatch/issues?q=is%3Aopen).
+- Fixing known [bugs](https://github.com/beeetbock/Beataniwatch/issues?q=is%3Aopen).
 
 ## Ground Rules & Expectations
 
@@ -28,7 +28,7 @@ Before we begin, here are a few things we anticipate from you and that you shoul
 
 ## How To Contribute
 
-If you'd like to contribute, start by searching through the [issues](https://github.com/ghoshRitesh12/aniwatch/issues) and [pull requests](https://github.com/ghoshRitesh12/aniwatch/pulls) to see whether someone else has raised a similar idea or question.
+If you'd like to contribute, start by searching through the [issues](https://github.com/beeetbock/Beataniwatch/issues) and [pull requests](https://github.com/beeetbock/Beataniwatch/pulls) to see whether someone else has raised a similar idea or question.
 
 If you don't see your idea listed, and you think it fits into the goals of this guide, you may do one of the following:
 
@@ -49,11 +49,11 @@ To contribute to this project, you must know the following:
 
 ### Clone the repository
 
-1. [Fork the repository](https://github.com/ghoshRitesh12/aniwatch/fork)
+1. [Fork the repository](https://github.com/beeetbock/Beataniwatch/fork)
 2. Clone your fork to your local machine using the following command (replace <your_username> with your actual GitHub username)
 
 ```bash
-git clone https://github.com/<your_username>/aniwatch
+git clone https://github.com/<your_username>/Beataniwatch
 ```
 
 3. Creating a new branch <br/>
