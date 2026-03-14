@@ -7,9 +7,11 @@ import type { ScrapedAnimeEpisodes } from "../types/scrapers/index.js";
 /**
  * @param {string} animeId - unique anime id
  * @example
- * import { getAnimeEpisodes } from "aniwatch";
+ * import { BeatAniWatch } from "beataniwatch";
  *
- * getAnimeEpisodes("attack-on-titan-112")
+ * const client = new BeatAniWatch.Scraper()
+ *
+ * client.getEpisodes("attack-on-titan-112")
  *  .then((data) => console.log(data))
  *  .catch((err) => console.error(err));
  *
