@@ -1,4 +1,8 @@
-# 2.0.0 (2026-03-14)
+## [2.0.1](https://github.com/beeetbock/Beataniwatch/compare/v2.0.0...v2.0.1) (2026-03-14)
+
+
+
+# [2.0.0](https://github.com/beeetbock/Beataniwatch/compare/2496e643ef430955bbb05ad5e547976baf2f4d07...v2.0.0) (2026-03-14)
 
 
 ### Bug Fixes
