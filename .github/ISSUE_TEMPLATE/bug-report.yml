@@ -1,7 +1,7 @@
 name: Bug report 🐛
 description: Create a report to help this package improve
 labels: [bug]
-assignees: [ghoshRitesh12]
+assignees: [beeetbock]
 body:
   - type: input
     id: describe-the-bug
