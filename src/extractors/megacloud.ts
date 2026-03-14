@@ -51,7 +51,7 @@ class MegaCloud {
     async extract(videoUrl: URL) {
         try {
             const extractedData: ExtractedData = {
-                tracks: [],
+                subtitles: [],
                 intro: {
                     start: 0,
                     end: 0,
@@ -90,7 +90,10 @@ class MegaCloud {
             if (!srcsData.encrypted && Array.isArray(encryptedString)) {
                 extractedData.intro = srcsData.intro;
                 extractedData.outro = srcsData.outro;
-                extractedData.tracks = srcsData.tracks;
+                extractedData.subtitles = srcsData.tracks.map((t) => ({
+                    url: t.file,
+                    lang: t.label ?? t.kind,
+                }));
                 extractedData.sources = encryptedString.map((s) => ({
                     url: s.file,
                     type: s.type,
@@ -129,7 +132,10 @@ class MegaCloud {
                 const sources = JSON.parse(decrypted);
                 extractedData.intro = srcsData.intro;
                 extractedData.outro = srcsData.outro;
-                extractedData.tracks = srcsData.tracks;
+                extractedData.subtitles = srcsData.tracks.map((t) => ({
+                    url: t.file,
+                    lang: t.label ?? t.kind,
+                }));
                 extractedData.sources = sources.map((s: any) => ({
                     url: s.file,
                     type: s.type,
@@ -283,7 +289,7 @@ class MegaCloud {
             );
             const key = response.data;
             const extractedData: ExtractedData = {
-                tracks: [],
+                subtitles: [],
                 intro: {
                     start: 0,
                     end: 0,
@@ -325,11 +331,13 @@ class MegaCloud {
                 ? rawSourceData.outro
                 : extractedData.outro;
 
-            extractedData.tracks =
-                rawSourceData.tracks?.map((track: any) => ({
-                    url: track.file,
-                    lang: track.label ? track.label : track.kind,
-                })) || [];
+            extractedData.subtitles =
+                rawSourceData.tracks
+                    ?.filter((track: any) => track.kind === "captions")
+                    ?.map((track: any) => ({
+                        url: track.file,
+                        lang: track.label ? track.label : track.kind,
+                    })) || [];
             extractedData.sources = decryptedSources.map((s: any) => ({
                 url: s.file,
                 isM3U8: s.type === "hls",
@@ -344,7 +352,7 @@ class MegaCloud {
 
     async extract4(embedIframeURL: string, category: "sub" | "dub" | "raw"): Promise<ExtractedData> {
         const extractedData: ExtractedData = {
-            tracks: [],
+            subtitles: [],
             intro: {
                 start: 0,
                 end: 0,
@@ -416,11 +424,13 @@ class MegaCloud {
 
         extractedData.intro = sourcesJson.intro;
         extractedData.outro = sourcesJson.outro;
-        extractedData.tracks =
-            sourcesJson.tracks?.map((track: any) => ({
-                url: track.file,
-                lang: track.label ? track.label : track.kind,
-            })) || [];
+        extractedData.subtitles =
+            sourcesJson.tracks
+                ?.filter((track: any) => track.kind === "captions")
+                ?.map((track: any) => ({
+                    url: track.file,
+                    lang: track.label ? track.label : track.kind,
+                })) || [];
         extractedData.sources = [
             {
                 url: sourcesJson.sources.file,
@@ -430,6 +440,7 @@ class MegaCloud {
 
         return extractedData;
     }
+
     async extract5(embedIframeURL: URL): Promise<ExtractedData> {
         // console.log("new extraction used")
         try {
@@ -473,7 +484,6 @@ class MegaCloud {
                 const encrypted = rawSourceData?.sources;
                 if (!encrypted)
                     throw new Error("Encrypted source missing in response");
-                console.log(clientKey, megacloudKey, encrypted);
 
                 const decrypted = decryptSrc2(encrypted, clientKey, megacloudKey);
 
@@ -483,8 +493,6 @@ class MegaCloud {
                     throw new Error("Decrypted data is not valid JSON");
                 }
             }
-            extractedData.intro = rawSourceData.intro;
-            extractedData.outro = rawSourceData.outro;
             extractedData.intro = rawSourceData.intro
                 ? rawSourceData.intro
                 : extractedData.intro;
