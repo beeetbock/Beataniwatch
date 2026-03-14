@@ -1,8 +1,8 @@
-// hianime class export
-export * as HiAnime from "./hianime/hianime.js";
+// BeatAniWatch class export
+export * as BeatAniWatch from "./hianime/hianime.js";
 
-// hianime error
-export { HiAnimeError } from "./hianime/error.js";
+// BeatAniWatch error
+export { HiAnimeError as BeatAniWatchError } from "./hianime/error.js";
 
 export type { AniwatchError } from "./config/error.js";
 
