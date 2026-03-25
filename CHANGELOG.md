@@ -1,3 +1,7 @@
+## [2.0.5](https://github.com/beeetbock/Beataniwatch/compare/v2.0.4...v2.0.5) (2026-03-25)
+
+
+
 ## [2.0.4](https://github.com/beeetbock/Beataniwatch/compare/v2.0.3...v2.0.4) (2026-03-25)
 
 
@@ -7,139 +11,6 @@
 
 
 ## [2.0.2](https://github.com/beeetbock/Beataniwatch/compare/v1.0.1...v2.0.2) (2026-03-14)
-
-
-
-# [1.0.0](https://github.com/beeetbock/Beataniwatch/compare/2496e643ef430955bbb05ad5e547976baf2f4d07...v1.0.0) (2026-03-14)
-
-
-### Bug Fixes
-
-* **animeAboutInfo:** bug where empty anime id wouldn't throw an error ([1aaae00](https://github.com/beeetbock/Beataniwatch/commit/1aaae00d241422f277c0b5a9499a2ffc196bd2cf))
-* **animeEpisodeSrcs:** fix bug where internal fn would call outer wrapper ([4ae88c3](https://github.com/beeetbock/Beataniwatch/commit/4ae88c3c80ee12c9ae3912066a1533467df7624f))
-* Delete dist directory ([2fd9897](https://github.com/beeetbock/Beataniwatch/commit/2fd98979c33f97fb97b1bb3fbe20df7470886fc8))
-* hehe ([5687791](https://github.com/beeetbock/Beataniwatch/commit/568779102c8ee429337a9870e8171db3bc0d4951))
-* improve mostPopular animes extraction for various anime pages ([cf24d2a](https://github.com/beeetbock/Beataniwatch/commit/cf24d2a7d4e6cfcd6b9fd32d23292022a0784adb))
-* megacloud sources ([e9ceb65](https://github.com/beeetbock/Beataniwatch/commit/e9ceb65a359ce272ae974c25e7071ffa2d25a0fe))
-* Megacloud V3 decryption ([ed1f920](https://github.com/beeetbock/Beataniwatch/commit/ed1f9206622bd041f1a36653afb538de89dd2da3))
-* **megacloud): `WebAssembly.instantiate(:** Argument 0 must be a buffer source` error ([277719e](https://github.com/beeetbock/Beataniwatch/commit/277719eb50150ddb77be609b5e014a51aef6657e))
-* **megacloud): `WebAssembly.instantiate(:** Argument 0 must be a buffer source` issue ([e9f973f](https://github.com/beeetbock/Beataniwatch/commit/e9f973f0d236cac77eeb575591e1ba7150d183d5))
-* **megacloud:** extracted sources undefined case ([559d7af](https://github.com/beeetbock/Beataniwatch/commit/559d7afa4add337ee1853ab6c6661aae105c4633))
-* **megacloud:** update incorrect megacloud referer header ([51b6583](https://github.com/beeetbock/Beataniwatch/commit/51b658305519ddd4786b752c10cb7e80025bca86))
-* missing category param in megacloud extractor ([ecc839a](https://github.com/beeetbock/Beataniwatch/commit/ecc839ae83a2c1c592df837b00f46ca1ca0dfabe))
-* possible edge case of invalid tzOffset ([5075279](https://github.com/beeetbock/Beataniwatch/commit/5075279d9a07bc5b56ee8fb58292f6cd226e9366))
-* remove episodeSources.test.ts ([c599543](https://github.com/beeetbock/Beataniwatch/commit/c5995436ec5bb34dcf9c02e092605a8b5836b422))
-* **scraper:** add Referer header and log episode source data ([d28f1ad](https://github.com/beeetbock/Beataniwatch/commit/d28f1ad775c9e64e40b5dc1d2aa1a3566e2ec410))
-* **scraper:** append trailing slash to Referer header URL ([1f3a10c](https://github.com/beeetbock/Beataniwatch/commit/1f3a10cb7f824bfd38c4e723b2e28c203a4e6932))
-* **scraper:** update Referer header to use serverUrl.origin ([249c3f9](https://github.com/beeetbock/Beataniwatch/commit/249c3f938a06596119f7cb34dd5b54057c5887c0))
-* temporary fix for the megacloud decryptor ([2314d3f](https://github.com/beeetbock/Beataniwatch/commit/2314d3f8c0a094067f39e9031f02687d166e6bd9))
-* **totalPages prop:** update `totalPages` default value to be 0 ([d69b052](https://github.com/beeetbock/Beataniwatch/commit/d69b05209c6c0d06a684fac4b30f0d9d10a7e721))
-* use the correct data structed ([3d5881d](https://github.com/beeetbock/Beataniwatch/commit/3d5881dc9547d821b9eff4048cd4c74b42386b56))
-* **vercel:** try1 to fix 'cannot find module puppeteer-extra-plugin-stealth' ([c7081aa](https://github.com/beeetbock/Beataniwatch/commit/c7081aa5b9cf3fe50065cfdabba71dd198bdc2e4)), closes [/github.com/vercel/pkg/issues/910#issuecomment-1032839383](https://github.com//github.com/vercel/pkg/issues/910/issues/issuecomment-1032839383)
-* **vercel:** try2 to fix 'cannot find module puppeteer-extra-plugin-stealth' ([9d5fe79](https://github.com/beeetbock/Beataniwatch/commit/9d5fe795475a4405bd072d44e5de9f013e3b13a8)), closes [/github.com/vercel/pkg/issues/910#issuecomment-1032839383](https://github.com//github.com/vercel/pkg/issues/910/issues/issuecomment-1032839383)
-* **vercel:** try3 to fix 'cannot find module puppeteer-extra-plugin-stealth' ([79f540d](https://github.com/beeetbock/Beataniwatch/commit/79f540d719c2ee8398f338f2e0d6aa10315e73ea)), closes [/github.com/vercel/pkg/issues/910#issuecomment-1374872029](https://github.com//github.com/vercel/pkg/issues/910/issues/issuecomment-1374872029)
-* **vercel:** try3 to fix 'cannot find module puppeteer-extra-plugin-stealth' ([d2966e5](https://github.com/beeetbock/Beataniwatch/commit/d2966e5e5d3509ff7108cf4a2136ccf7846c1427)), closes [/github.com/vercel/pkg/issues/910#issuecomment-1374872029](https://github.com//github.com/vercel/pkg/issues/910/issues/issuecomment-1374872029)
-
-
-### Features
-
-* add `__dirname` and `__filename` constants ([3e2ee94](https://github.com/beeetbock/Beataniwatch/commit/3e2ee944bbd7765b1d3324af32a4ac7277a5a629))
-* add `ci` script to perform linting, testing and building ([de69bee](https://github.com/beeetbock/Beataniwatch/commit/de69bee81d595bfd0ba04821c9ed67b99998511e))
-* add `HiAnime` namespace exports ([dddd32e](https://github.com/beeetbock/Beataniwatch/commit/dddd32e5728485a0ea7cf72572951cd9d8107450))
-* add `ScrapedAnimeAZList` scraper type ([4d67d49](https://github.com/beeetbock/Beataniwatch/commit/4d67d492d7084edaac1971db3a642c27a315949f))
-* add `ScrapedAnimeAZList` scraper type ([cb2cc2e](https://github.com/beeetbock/Beataniwatch/commit/cb2cc2e9b1ea0580c0de5f60f59e1ab9cc7bc0bd))
-* add AniwatchError class for handling errors ([dc5e7b7](https://github.com/beeetbock/Beataniwatch/commit/dc5e7b77f03a27632adddbf1099f16ba58674e23))
-* add bug report issue template ([0e5627b](https://github.com/beeetbock/Beataniwatch/commit/0e5627bfb6a45fdbeb77d08dddc39718d0e1d0c8))
-* add code of conduct ([ebee0e6](https://github.com/beeetbock/Beataniwatch/commit/ebee0e65f16f3f23f07f6e5a2f3d2f0e5cde0303))
-* add CODEOWNERS file ([a0b5e0e](https://github.com/beeetbock/Beataniwatch/commit/a0b5e0eaf91d0f0b8773028cb00bfebf442253f0))
-* add contributing guidelines ([9d90e46](https://github.com/beeetbock/Beataniwatch/commit/9d90e46613717a56d39dc5f9a2fa339b466f144f))
-* add custom husky install script to skip it on production and CI ([2dca579](https://github.com/beeetbock/Beataniwatch/commit/2dca579de210ba74daa3fc400bfd8468b777c89f))
-* add custom logger ([6038366](https://github.com/beeetbock/Beataniwatch/commit/6038366bc328bc70fd60af8a311041f486145698))
-* add dynamic injectable script loading, instead of embedding it in the pkg ([755f6c8](https://github.com/beeetbock/Beataniwatch/commit/755f6c83ad70bd21b30480ed43e5cb2786ccf6b2))
-* add exports in index.ts for scrapers and types ([bc658c7](https://github.com/beeetbock/Beataniwatch/commit/bc658c70866ad61d3ff068ebe2b7b435d80686a7))
-* add feature request issue template ([22b7984](https://github.com/beeetbock/Beataniwatch/commit/22b7984860513e7c6f80b6b7dd3ff02530e635a4))
-* add gitignore file ([5b098a5](https://github.com/beeetbock/Beataniwatch/commit/5b098a538bfb7e5dde6c3378601b2a3b38ae37fc))
-* add hianime main export file ([aee3b6d](https://github.com/beeetbock/Beataniwatch/commit/aee3b6d4cb65274c3b46619df3ad112bb794a35f))
-* add HiAnimeError and AniwatchError exports ([2a62afe](https://github.com/beeetbock/Beataniwatch/commit/2a62afed3833d443d62ce4089a115095e894a622))
-* add HiAnimeError that extends Error and implements AniwatchError ([52749e6](https://github.com/beeetbock/Beataniwatch/commit/52749e614bb6e5fd54e50d969aece4b40beb3f2c))
-* add husky conventional commit check ([02e20f5](https://github.com/beeetbock/Beataniwatch/commit/02e20f56c1bed242ccce5c0809ae2ad75a783c1f))
-* add husky custom install script ([673a96b](https://github.com/beeetbock/Beataniwatch/commit/673a96b36a4680a637910e3a5713f2deeb395bfb))
-* add index file ([2496e64](https://github.com/beeetbock/Beataniwatch/commit/2496e643ef430955bbb05ad5e547976baf2f4d07))
-* add LICENSE file ([773028f](https://github.com/beeetbock/Beataniwatch/commit/773028fb10a13b9adfb42a6af0cccb429dd03a90))
-* add LICENSE file ([b30c898](https://github.com/beeetbock/Beataniwatch/commit/b30c8985072ca7ca17d6d21d883bea94406e386a))
-* add loading of injectable js file from raw githubusercontent instead ([d3fe5e9](https://github.com/beeetbock/Beataniwatch/commit/d3fe5e9d4f39eec65bcba3cbf81e3a72031449bf))
-* add npmignore file ([4507d68](https://github.com/beeetbock/Beataniwatch/commit/4507d68e7c379e611271345fd65de31d8bbe2862))
-* add package.json file ([8897b62](https://github.com/beeetbock/Beataniwatch/commit/8897b62f13a9bdced4813d8ded58f67124cf8ad2))
-* add pnpm lock file ([0f12ecb](https://github.com/beeetbock/Beataniwatch/commit/0f12ecb550d5754eb99ad144cd0f4acd8b7ccdb3))
-* add pre-commit hook for package.json formatting in release workflow ([ab68040](https://github.com/beeetbock/Beataniwatch/commit/ab680405d767ad175ee5acbcf811cd42fa549920))
-* add preCommit function to format package.json ([20b9de5](https://github.com/beeetbock/Beataniwatch/commit/20b9de5bc29cd1f3c8a1d80078680e7ae12aeec7))
-* add prettier and editor config ([932c44e](https://github.com/beeetbock/Beataniwatch/commit/932c44e274bd9ed58c1ff99dfc6dfe253a16ffaa))
-* add prettier dev dep ([23a1349](https://github.com/beeetbock/Beataniwatch/commit/23a1349a2c73f08b47b6615f47588ca0d09f5749))
-* add prettier dev dep ([8bfd3c5](https://github.com/beeetbock/Beataniwatch/commit/8bfd3c58299548d79e0e2489a8fc7220539e24c0))
-* add prettierignore file ([08c58d9](https://github.com/beeetbock/Beataniwatch/commit/08c58d9a74adb52e903fc308ed677835fb583884))
-* add scraper extractors ([fa01d83](https://github.com/beeetbock/Beataniwatch/commit/fa01d83031486272924ed86ea99b533648569c70))
-* add tsconfig file ([87979d2](https://github.com/beeetbock/Beataniwatch/commit/87979d2e222740cbdb1ed06289e3b9faff951639))
-* add tsup config file ([3148ff7](https://github.com/beeetbock/Beataniwatch/commit/3148ff79887250fbc1d315df30adb0fc55cf3a56))
-* add vitest.config.ts for aniwatch test configuration ([db8c70f](https://github.com/beeetbock/Beataniwatch/commit/db8c70feb273694201de462390be44493ed88faf))
-* **animeQtip:** add `getAnimeQtipInfo` scraper ([f01e51d](https://github.com/beeetbock/Beataniwatch/commit/f01e51ddbd1772eb412512b74dea0025eac9c7f7))
-* **animeQtip:** add `ScrapedAnimeQtipInfo` type ([22e8ae0](https://github.com/beeetbock/Beataniwatch/commit/22e8ae05227b54e3249dfb92689f2a3f835f5bff))
-* **animeQtip:** add new `getQtipInfo` method ([2a9768d](https://github.com/beeetbock/Beataniwatch/commit/2a9768d3d9380a18ad478878bd309fc4dfa22500))
-* **az-list:** add `AZListSortOptions` type ([78d9adc](https://github.com/beeetbock/Beataniwatch/commit/78d9adcec28108716b1bf12f17547714d7dc2f5a))
-* **az-list:** add `getAZList` scraper method ([eb352f0](https://github.com/beeetbock/Beataniwatch/commit/eb352f026c25c3e4e1496b81ba5be23e7f9d34cf))
-* **az-list:** add `getAZList` scraper method ([08dbc26](https://github.com/beeetbock/Beataniwatch/commit/08dbc266e5d6cc6f91df518fc67f0a6324d62980))
-* **az-list:** update `azSortOption` prop name to `sortOption` ([afe76fe](https://github.com/beeetbock/Beataniwatch/commit/afe76fe4f64122b44e0030d84d83877aed411abb))
-* combine all `SEARCH_PAGE_FILTERS` into a single map ([2bbeb25](https://github.com/beeetbock/Beataniwatch/commit/2bbeb2545e2f5fa025e8d7a95c13876d9d2336a6))
-* **docs:** update sample usage showcasing different exports ([184ba26](https://github.com/beeetbock/Beataniwatch/commit/184ba2664de2a075613da1a2943c90f6429a6e63))
-* **extractor:** add AniwatchError support ([710e8c0](https://github.com/beeetbock/Beataniwatch/commit/710e8c0d2720cf625272f1e65600ed7221d83a23))
-* **getEstimatedSchedule:** update `getEstimatedSchedule` method signature ([238e108](https://github.com/beeetbock/Beataniwatch/commit/238e1082cf70d82715e025a27fa4f22db73c9fd8))
-* **getNextEpisodeSchedule:** add `getNextEpisodeSchedule` method ([e1b550c](https://github.com/beeetbock/Beataniwatch/commit/e1b550cf2b7ba29ac504a9056f6e753f846bb82d))
-* **getNextEpisodeSchedule:** add `getNextEpisodeSchedule` method implementation ([b9c5c6a](https://github.com/beeetbock/Beataniwatch/commit/b9c5c6a5500509a7ef9243d3325d61d89afca947))
-* **getNextEpisodeSchedule:** add scraper return type ([187853b](https://github.com/beeetbock/Beataniwatch/commit/187853be17a6bbcdcfc98ef360d5c7ff66a92422))
-* **HiAnimeError:** add `json()` for convenience ([3590da0](https://github.com/beeetbock/Beataniwatch/commit/3590da04d145ed734e34a795739224b9206306ae))
-* improve error handling & add js docs ([cc14b3f](https://github.com/beeetbock/Beataniwatch/commit/cc14b3f110417bf3c52b1554aabc2de67301e9b2))
-* **megacloud:** add `extractUsingPuppeteer` method as a temp solution ([0bd9601](https://github.com/beeetbock/Beataniwatch/commit/0bd960151122816aace80ac0852f0f0a42927e22))
-* **megacloud:** add megacloud decoded png ([223c197](https://github.com/beeetbock/Beataniwatch/commit/223c197d8467b8e3605be5b69f02883b5c20d98d))
-* **megacloud:** add megacloud player minjs custom file ([05683e0](https://github.com/beeetbock/Beataniwatch/commit/05683e0546450708f2b6a350775b92347e4d87d4))
-* **megacloud:** fix wasm module load error hindering source extraction ([5f7925a](https://github.com/beeetbock/Beataniwatch/commit/5f7925a2de58280b2f1540d68004e1702db68fc9))
-* **megacloud:** integrate https://github.com/drblgn/rabbit_wasm 's solution ([e2744f8](https://github.com/beeetbock/Beataniwatch/commit/e2744f8fe7107f2395a826802d89dd3488d3369f))
-* **megacloud:** integrate https://github.com/drblgn/rabbit_wasm 's solution ([1725dd0](https://github.com/beeetbock/Beataniwatch/commit/1725dd04ce479b6a3bdc3ef9ffe3a6bf4ffa26c1))
-* **megacloud:** remove `extractUsingPuppeteer` method & add `extract2` ([a6a622e](https://github.com/beeetbock/Beataniwatch/commit/a6a622e0cdbadcb80cd96abd12e04f9b71039728))
-* **megacloud:** use `extract2` method ([9b4b620](https://github.com/beeetbock/Beataniwatch/commit/9b4b6206218ae712966ea25eea2c4596197888e5))
-* **megacloud:** using `extractUsingPuppeteer` as a temp solution ([69664ec](https://github.com/beeetbock/Beataniwatch/commit/69664ec77f491e500a23ff995e0c1a57c579b7ff))
-* remove `cjs` support ([b160df5](https://github.com/beeetbock/Beataniwatch/commit/b160df552ffbce1dcae14010220070313ea73b3d))
-* remove HttpError union type ([2046ca9](https://github.com/beeetbock/Beataniwatch/commit/2046ca9a892c2b7c2444edd7d979b21773d05acf))
-* remove HttpError union type ([fc4a097](https://github.com/beeetbock/Beataniwatch/commit/fc4a097ff044b6b1b4cb119f2d5aeba3b461b0cb))
-* **scrapers:** add pkg scrapers ([967dbb0](https://github.com/beeetbock/Beataniwatch/commit/967dbb0970dfbd04be63be012cf52e3e3ced4ce7))
-* **scrapers:** use  for scraper errors ([4d2e417](https://github.com/beeetbock/Beataniwatch/commit/4d2e417611b247a3246dd15258fefb175b10f192))
-* set prepare script to custom husky install script to skip it on production and CI ([7c7a5e8](https://github.com/beeetbock/Beataniwatch/commit/7c7a5e8cfdf3781fce76afae8987e32b74406ae7))
-* **style:** formatting changes ([3aba824](https://github.com/beeetbock/Beataniwatch/commit/3aba824b0328c2b3c47d6c2cace0a1b56a8375e5))
-* **try_megacloud:** update injectable js file resolved path ([e248c79](https://github.com/beeetbock/Beataniwatch/commit/e248c7920dc56f2eddb86464ca2907ae8efc721b))
-* **types:** add pkg types ([25c05c9](https://github.com/beeetbock/Beataniwatch/commit/25c05c99709d4b0747df78a77c19e173a98816f4))
-* update `SEARCH_PAGE_FILTERS` and add `AZ_LIST_SORT_OPTIONS` ([2676eb1](https://github.com/beeetbock/Beataniwatch/commit/2676eb175340991f7ffec9ab80c2d982723cecb9))
-* update certain types for readability and other types' paths ([cd26d97](https://github.com/beeetbock/Beataniwatch/commit/cd26d9710fe0e75df1b8ee181dd5931266702544))
-* update error logging format ([9899221](https://github.com/beeetbock/Beataniwatch/commit/9899221fcacedd75d8ba2b452c6f92f0d7026eff))
-* update exports to include only scrapers ([c20d6d4](https://github.com/beeetbock/Beataniwatch/commit/c20d6d47303746b6d5a80db5c655e3d0adb93340))
-* update hianime domain to `hianimez` ([853c1e2](https://github.com/beeetbock/Beataniwatch/commit/853c1e24fe28d1cddf19523ab77277468a5a85f8))
-* update HiAnime error handling ([883a0c7](https://github.com/beeetbock/Beataniwatch/commit/883a0c7427012848b667454b431712479526c093))
-* update HiAnime error handling ([4bbc194](https://github.com/beeetbock/Beataniwatch/commit/4bbc194623e91d16be6f550eaf985e1cfccf0b72))
-* update HiAnime error handling ([4ee16bb](https://github.com/beeetbock/Beataniwatch/commit/4ee16bbe604e3f17f97217c0e8bd42ca342a386b))
-* update injectableJS file import path ([3e11e5d](https://github.com/beeetbock/Beataniwatch/commit/3e11e5d2b796d11c4f4aa9ca80cc0657614e5b16))
-* update injectableJS file import path ([47eda52](https://github.com/beeetbock/Beataniwatch/commit/47eda527b2a9c004fc3e7705595d8c796fe04758))
-* update package config error, replaced with interface ([9d62023](https://github.com/beeetbock/Beataniwatch/commit/9d6202353ec6bc2f6fa779fdbbfd42e6590552e9))
-* update req timeout ([e5e3168](https://github.com/beeetbock/Beataniwatch/commit/e5e31682e7745808619ce1b19282487033cd3db7))
-* **utils:** add pkg utils ([61cf765](https://github.com/beeetbock/Beataniwatch/commit/61cf765d51220d8eafebc5ce11bbf0981f788988))
-* **utils:** use `AniwatchError` for reusable utility methods ([e2e4991](https://github.com/beeetbock/Beataniwatch/commit/e2e49915a99d22d44c01c76ea25e5606e42f1ad5))
-
-
-### Reverts
-
-* domain name to hianimez.to ([bfc402a](https://github.com/beeetbock/Beataniwatch/commit/bfc402a4ccfb19950e8c8cb06413c14b80c0504e))
-
-
-### BREAKING CHANGES
-
-* update code structure and revamped hianime namespace exports, inorder to accomodate other future providers
-* **scrapers:** remove  dependency for convenience
 
 
 
