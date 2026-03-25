@@ -1,6 +1,6 @@
 {
     "name": "beataniwatch",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "description": "📦 A scraper package serving anime information from hianime.cv",
     "license": "MIT",
     "main": "dist/index.js",
